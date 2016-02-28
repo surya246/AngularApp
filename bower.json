@@ -1,0 +1,25 @@
+{
+  "name": "pms",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "surya <thotasuryaprakash246@gmail.com>"
+  ],
+  "license": "BSD-2-Clause",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.0",
+    "jquery": "^2.2.1",
+    "bootswatch": "^3.3.6+1",
+    "ng-lodash": "^0.4.0"
+  }
+}

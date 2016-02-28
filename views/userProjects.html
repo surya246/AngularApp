@@ -1,0 +1,20 @@
+<div>
+	<table class = "table table-bordered">
+		<thead ng-repeat = "details in userProjectObj | limitTo:1">
+			<th ng-repeat= "(key,value) in details">
+				{{key | uppercase}}
+			</th>
+		</thead>	
+		<tbody class = "table table-default">
+			<tr ng-repeat = "details in userProjectObj">
+				<td>{{details.id}}</td>
+				<td>{{details.name}}</td>
+				<td>
+					<span ng-repeat = "members in details.projectMembers.userId">
+						{{members}}
+					</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>	

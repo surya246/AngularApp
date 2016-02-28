@@ -1,0 +1,13 @@
+
+		<div>
+			<table class = "table table-bordered">
+				<thead ng-repeat= "user in obj">
+					<th ng-repeat= "(key,value) in user">{{key|uppercase}}</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat= "user in obj">
+						<td ng-repeat= "(key,value) in user">{{value}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>	

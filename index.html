@@ -1,0 +1,43 @@
+<html ng-app= "pmsApp">
+	<head>
+		<title>Project Management</title>
+		
+		<script src = "bower_components/jquery/dist/jquery.min.js"></script>
+		<link href = "bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src = "bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src = "bower_components/angular/angular.js"></script>
+		<script src = "bower_components/angular-route/angular-route.min.js"></script>
+		<script src = "bower_components/ng-lodash/build/ng-lodash.min.js"></script>
+		<script src = "js/modules/app.js"></script>
+		<script src = "js/controllers/controller.js"></script>
+		<script src = "js/models/services.js"></script>
+		<script src = "js/directives/user.js"></script>
+
+	</head>
+   
+	<body ng-controller = "dropDownController">
+		
+			<div class = "container">
+				<div class="page-header">
+					<!--<select class= "btn btn-info" ng-change= "cuUser(id)" ng-model= "id"> 
+							<option ng-repeat= "user in userObj.users" ng-value= "{{user.userId}}">{{user.Name}}</option>
+					</select>-->
+					<select class= "btn btn-info" ng-options="user.userId as user.Name for user in userObj.users" ng-model="	defaultUser" ng-change= "currentUser(defaultUser)">         
+
+					</select>
+				</div>
+				<div class="col-md-4">
+					<user></user>
+				</div>
+				<div class="col-md-4">
+					<user-info></user-info>
+				</div>
+				<div class="col-md-4">
+					<user-projects></user-projects>
+				</div>
+			</div>
+
+	</body>
+
+</html>
+      
