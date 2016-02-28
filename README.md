@@ -1,4 +1,6 @@
-Using Angularjs, Angular-route, Angular-cookies, Bootstrap & jquery.
+# AngularApp
+
+Using Angularjs, Angular-route, Angular-lodash, Bootstrap & jquery.
 
 Move to the project folder:
 
@@ -34,5 +36,4 @@ cd folder
 npm install
 bower install
 grunt http-server
-Status API Training Shop Blog About Pricing
 
