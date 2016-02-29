@@ -28,9 +28,7 @@ app.controller('userProjectController',function($scope ,$routeParams,userProject
 	
 });
 
-
-
-app.controller("dropDownController",function($scope, $rootScope, userService,projectService,userProjectService){
+app.controller("dropDownController",function($scope, $rootScope, userService,projectService,userProjectService,userTaskService){
 	$rootScope.defaultUser = 1;
 	userService.get().then(function(res){
 		$scope.userObj = res.data;
@@ -41,8 +39,13 @@ app.controller("dropDownController",function($scope, $rootScope, userService,pro
 
 			userProjectService.get($scope.Id).then(function (res) {
 				$scope.userProjectObj = res;
-				console.log($scope.userProjectObj);
+				//console.log($scope.userProjectObj);
+
 			});
+			userTaskService.get($scope.Id).then(function(res) {
+					$scope.userTaskObj = res;
+					console.log($scope.userTaskObj);
+			});	
 		};
 });
 

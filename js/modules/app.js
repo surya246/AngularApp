@@ -1,7 +1,7 @@
 var app = angular.module('pmsApp', ['ngRoute','ngLodash']);
 
 
-app .config(['$routeProvider',
+/*app .config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/users', {
           templateUrl: '../views/user.html',
@@ -15,8 +15,9 @@ app .config(['$routeProvider',
       }).when('/All', {
             templateUrl: '../views/All.html',
             controller: 'allController'
-      });/* when('/users/:id/projects', {
+      }). when('/users/:id/projects', {
             templateUrl: '../views/projects.html',
             controller: 'userProjectController'
-      });*/
+      });
   }]);
+*/

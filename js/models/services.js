@@ -42,3 +42,23 @@ app.factory('userProjectService',function($http,$q,$rootScope){
        }	
 	};
 });
+
+app.factory('userTaskService', function($http,$q){
+ 	return {
+ 		 get:function(info) {
+ 		 	var defered = $q.defer();
+ 		 	var obj = [];
+ 		 	$http.get('js/modules/Tasks.json').success(function(data){
+ 		 		for(var i=0; i<data.tasks.length;i++){
+ 		 			
+ 		 				if(info == data.tasks[i].userId){
+ 		 					obj.push(data.tasks[i]);
+ 		 				}
+ 		 		}
+ 		 		// console.log(obj);
+ 		 		defered.resolve(obj);
+ 		 	});
+ 		 		return defered.promise;
+ 		 }
+ 	};
+});

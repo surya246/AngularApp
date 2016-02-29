@@ -18,3 +18,10 @@ app.directive('userProjects',function(){
 		templateUrl:"views/userProjects.html"
 	}
 });
+
+app.directive('userTasks',function(){
+	return {
+		restrict:'E',
+		templateUrl:"views/userTasks.html"
+	}
+});

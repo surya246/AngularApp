@@ -22,7 +22,7 @@
 					<!--<select class= "btn btn-info" ng-change= "cuUser(id)" ng-model= "id"> 
 							<option ng-repeat= "user in userObj.users" ng-value= "{{user.userId}}">{{user.Name}}</option>
 					</select>-->
-					<select class= "btn btn-info" ng-options="user.userId as user.Name for user in userObj.users" ng-model="	defaultUser" ng-change= "currentUser(defaultUser)">         
+					<select class= "btn btn-info" ng-options="user.userId as user.Name for user in userObj.users" ng-model="	defaultUser" ng-change= "currentUser(defaultUser)" ng-onload= "currentUser(defaultUser)" >         
 
 					</select>
 				</div>
@@ -34,6 +34,9 @@
 				</div>
 				<div class="col-md-4">
 					<user-projects></user-projects>
+				</div><br>
+				<div class="col-md-4">
+					<user-tasks></user-tasks>
 				</div>
 			</div>
 
